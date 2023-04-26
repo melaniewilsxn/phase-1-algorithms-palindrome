@@ -1,13 +1,23 @@
 function isPalindrome(word) {
   // Write your algorithm here
+  let palindrome = true
+  for(i=0; i<word.length; i++){
+    if(word.charAt(i) === word.charAt(word.length-(i+1))){
+      palindrome = true;
+    } else {
+      palindrome = false
+    }
+   } return palindrome
 }
 
 /* 
-  Add your pseudocode here
+  iterate over each letter of the word, comparing first and last, second and second to last, etc.
+  
+  if palindrome, return true; if not, return false
 */
 
 /*
-  Add written explanation of your solution here
+  isPalindrome will except a string and return true if palindrome or false if not
 */
 
 // You can run `node index.js` to view these console logs
